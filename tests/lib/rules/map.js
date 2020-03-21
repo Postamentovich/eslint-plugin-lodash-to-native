@@ -9,9 +9,7 @@
 //------------------------------------------------------------------------------
 
 var rule = require("../../../lib/rules/map"),
-
-    RuleTester = require("eslint").RuleTester;
-
+  RuleTester = require("eslint").RuleTester;
 
 //------------------------------------------------------------------------------
 // Tests
@@ -19,19 +17,17 @@ var rule = require("../../../lib/rules/map"),
 
 var ruleTester = new RuleTester();
 ruleTester.run("map", rule, {
+  valid: ["_.map({}, {} => {}))"],
 
-    valid: [
-
-        // give me some code that won't trigger a warning
-    ],
-
-    invalid: [
+  invalid: [
+    {
+      code: "_.map([0], () => {})))",
+      errors: [
         {
-            code: "_.map(Array, fn))",
-            errors: [{
-                message: "Fill me in.",
-                type: "Me too"
-            }]
+          message: "Fill me in.",
+          type: "Me too"
         }
-    ]
+      ]
+    }
+  ]
 });
