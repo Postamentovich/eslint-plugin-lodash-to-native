@@ -1,6 +1,6 @@
 # eslint-plugin-lodash-to-native
 
-Lodash plugin
+Lodash eslint plugin
 
 ## Installation
 
@@ -13,7 +13,7 @@ $ npm i eslint --save-dev
 Next, install `eslint-plugin-lodash-to-native`:
 
 ```
-$ npm install eslint-plugin-lodash-to-native --save-dev
+$ npm install https://github.com/Postamentovich/eslint-plugin-lodash-to-native.git --save-dev
 ```
 
 **Note:** If you installed ESLint globally (using the `-g` flag) then you must also install `eslint-plugin-lodash-to-native` globally.
@@ -36,14 +36,13 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
     "rules": {
-        "lodash-to-native/rule-name": 2
+        "lodash-to-native/map": "warn"
     }
 }
 ```
 
 ## Supported Rules
-
-* Fill in provided rules here
+* [map](docs/rules/map.md): Prefer native Array.map method.
 
 
 

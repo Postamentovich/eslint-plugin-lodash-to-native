@@ -1,17 +1,14 @@
-# Native array map preference (map)
-
-Please describe the origin of the rule here.
-
+# Native Array.map preference (map)
 
 ## Rule Details
 
-This rule aims to...
+This rule aims to use native arrays methods prefer lodash methods.
 
 Examples of **incorrect** code for this rule:
 
 ```js
 
-// fill me in
+_.map([], () => {})
 
 ```
 
@@ -19,18 +16,6 @@ Examples of **correct** code for this rule:
 
 ```js
 
-// fill me in
+[].map(() => {})
 
 ```
-
-### Options
-
-If there are any options, describe them here. Otherwise, delete this section.
-
-## When Not To Use It
-
-Give a short description of when it would be appropriate to turn off this rule.
-
-## Further Reading
-
-If there are other links that describe the issue this rule addresses, please include them here in a bulleted list.
